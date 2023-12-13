@@ -1,6 +1,23 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+#on: [push]
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'feature/**'
+      - 'issue/**'
+      - 'bug/**'
+      - develop
+
+    paths:
+      - "apps/auth/**"
+      - "pkg/**"
+      - "grpc-interfaces/**"
+      - "common/**"
+      - ".github/workflows/auth.yml"
+      - "go.*"
+
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
