@@ -18,6 +18,7 @@ on:
       - ".github/workflows/auth.yml"
       - "go.*"
 
+
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
